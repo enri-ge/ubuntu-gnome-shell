@@ -66,7 +66,7 @@ def menu():
         print()
         print("""---Menu Principale---
         1. Impostare le categorie delle cartelle predefinite
-        2. Customize folders and categories before applying
+        2. Personalizza categorie delle cartelle prima di proseguire
         3. Rimuovere tutte le cartelle esistenti dalla lista
         4. Cancella ed esci.""")
         print()
@@ -78,7 +78,7 @@ def menu():
         else:
             os.system("clear")
             for i in range(2): print()
-            print("ERROR: Invalid choice.")
+            print("ERRORE: Scelta non valida")
 
 
 def doReset():
@@ -88,20 +88,19 @@ def doReset():
 def resetAll():
     os.system("clear")
     for i in range(2): print()
-    print("""WARNING! This will erase ALL folders you have
-    in your apps dashboard and return all apps
-    to an unsorted state. 
+    print("""AVVISTO! Questa operazione cancellerà tutte le cartelle che hai
+     nella dashboard e riporterà tutte le app allo stato iniziale.
 
-    This includes user-created folders as well as
-    any created by this script or other means.""")
+     Ciò include le cartelle create dall'utente così come
+     qualsiasi altra cartella creata da questo script o altre modalità.""")
 
-    if ynQuery("Are you sure you wish to do this?"):
+    if ynQuery("Sei sicuro di volerlo fare?"):
         os.system("clear")
         for i in range(2): print()
         doReset()
-        print("Your apps dashboard is now free of all folders.")
+        print("La tua dashboard delle app non ha più le cartelle.)
     else:
-        print("Reset not performed. Exiting.")
+        print("Ripristino non eseguito. Uscita")
         sys.exit()
 
 
